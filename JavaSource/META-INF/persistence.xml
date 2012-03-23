@@ -4,13 +4,13 @@
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<jta-data-source>java:jboss/datasources/MySqlDS</jta-data-source>
 		<properties>
-			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
-			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
+			<property name="hibernate.connection.driver_class" value="org.gjt.mm.mysql.Driver"/>
 			<property name="hibernate.connection.url" value="jdbc:mysql://localhost/estoque"/>
-			<property name="hibernate.default_schema" value="estoque"/>
 			<property name="hibernate.connection.username" value="root"/>
 			<property name="hibernate.connection.password" value="mysql"/>
 			<property name="hibernate.hbm2ddl.auto" value="update"/>
+			<property name="hibernate.default_catalog" value="estoque"/>
 		</properties>
 	</persistence-unit>
 </persistence>
