@@ -1,5 +1,7 @@
 package com.rhcloud.alexandretavares.estoque.domain;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,7 +11,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tipo_de_peca")
-public class TipoDePeca {
+@SuppressWarnings("serial")
+public class TipoDePeca implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
