@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tipo_de_peca")
+@Table(name = "tipo_de_peca", catalog = "estoque")
 @SuppressWarnings("serial")
 public class TipoDePeca implements Serializable {
 
@@ -18,7 +18,7 @@ public class TipoDePeca implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(name = "nome")
+	@Column(name = "nome", nullable = false, length = 30)
 	private String nome;
 
 	public TipoDePeca() {
