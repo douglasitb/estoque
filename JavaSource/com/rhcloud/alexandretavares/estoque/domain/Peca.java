@@ -11,6 +11,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.Length;
 
 @Entity
 @Table(name = "peca", catalog = "estoque")
@@ -21,18 +24,26 @@ public class Peca implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(nullable = false, unique = true, length = 50)
+	@NotNull
+	@Length(min = 3, max = 50)
+	@Column(unique = true)
 	private String nome;
 
-	@Column(nullable = false, length = 255)
+	@NotNull
+	@Length(max = 255)
 	private String descricao;
 
-	@Column(nullable = false)
+	@NotNull
 	private Double preco;
 
 	@ManyToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
 	@JoinColumn(name = "tipo_de_peca_id")
 	private TipoDePeca tipoDePeca;
+
+	@NotNull
+	@ManyToOne
+	@JoinColumn(name = "deposito_id", insertable = false, updatable = false)
+	private Deposito deposito;
 
 	public Peca() {
 		// TODO Auto-generated constructor stub
@@ -76,6 +87,14 @@ public class Peca implements Serializable {
 
 	public void setTipoDePeca(TipoDePeca tipoDePeca) {
 		this.tipoDePeca = tipoDePeca;
+	}
+
+	public Deposito getDeposito() {
+		return deposito;
+	}
+
+	public void setDeposito(Deposito deposito) {
+		this.deposito = deposito;
 	}
 
 }

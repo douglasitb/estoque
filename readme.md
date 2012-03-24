@@ -16,5 +16,5 @@ as bibliotecas do hibernate, jpa e jsf.
 
 ### Versões:
 
-* JSF 2.0, Jboss AS 7, Hibernate 3.x com JPA 2.0, PrimeFaces 3.2, MySQL 5.1
+* JSF 2.0, Jboss AS 7, Hibernate 4.0.1 com JPA 2.0, PrimeFaces 3.2, MySQL 5.1
 * Demo: http://appestoque-alexandretavares.rhcloud.com
