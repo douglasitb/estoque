@@ -15,7 +15,7 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
 
 @Entity
-@Table(name = "tipo_de_peca", catalog = "estoque")
+@Table(name = "tipo_de_peca", catalog = "appestoque")
 @SuppressWarnings("serial")
 @NamedQueries({
 	@NamedQuery(name = "TipoDePeca.findAll", query = "SELECT tp FROM TipoDePeca tp ORDER BY tp.nome ASC"),

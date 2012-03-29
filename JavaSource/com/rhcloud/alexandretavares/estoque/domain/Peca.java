@@ -19,7 +19,7 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
 
 @Entity
-@Table(name = "peca", catalog = "estoque")
+@Table(name = "peca", catalog = "appestoque")
 @SuppressWarnings(value = "serial")
 @NamedQueries({
 	@NamedQuery(name = "Peca.findAllLikeNome", query = "SELECT p FROM Peca p WHERE p.nome LIKE ?1"),

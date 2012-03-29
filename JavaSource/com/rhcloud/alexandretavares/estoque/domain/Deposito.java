@@ -20,7 +20,7 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
 
 @Entity
-@Table(name = "deposito", catalog = "estoque")
+@Table(name = "deposito", catalog = "appestoque")
 @SuppressWarnings("serial")
 @NamedQueries({
 	@NamedQuery(name = "Deposito.findAll", query = "SELECT d FROM Deposito d"),
