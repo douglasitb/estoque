@@ -25,7 +25,7 @@
 			</ui:insert>
 		</p:layoutUnit>
 
-		<p:layoutUnit position="south" size="100">
+		<p:layoutUnit position="south" size="50">
 			<ui:insert name="footer">
     	Footer area.  See comments below this line in the source.
     	<!--  include your header file or uncomment the include below and create footer.xhtml in this directory -->
@@ -33,8 +33,8 @@
 			</ui:insert>
 		</p:layoutUnit>
 
-		<p:layoutUnit position="west" size="300">
-			<h:outputText value="Left content" />
+		<p:layoutUnit position="west" size="200">
+			<ui:include src="menu.xhtml" />
 		</p:layoutUnit>
 
 		<p:layoutUnit position="east" size="200">
@@ -43,7 +43,6 @@
 
 		<p:layoutUnit position="center">
 			<ui:insert name="content">
-    	Content area.  See comments below this line in the source.
     	<!--  include your content file or uncomment the include below and create content.xhtml in this directory -->
 				<!-- <div> -->
 				<!-- <ui:include src="content.xhtml"/> -->

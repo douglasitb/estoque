@@ -16,4 +16,8 @@ public class TipoDePecaBean {
 	public void salvar() {
 		System.out.println("Salvando");
 	}
+	
+	public String novo() {
+		return "create";
+	}
 }
